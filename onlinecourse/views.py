@@ -149,7 +149,7 @@ def show_exam_result(request, course_id, submission_id):
     questions = course.question_set.all()
 
     for question in questions:
-        correct_choices = question.choices.filter(is_correct=True)
+        correct_choices = question.choice_set.filter(is_correct=True)
         selected_choices = choices.filter(question=question)
 
         if set(selected_choices) == set(correct_choices):
