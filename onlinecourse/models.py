@@ -121,7 +121,7 @@ class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "Choice: " + self.text
+        return "Choice: " + self.content
 
 
 # One enrollment could have multiple submission
